@@ -7,6 +7,7 @@
   <a href="#news">{$_("navbar.carrer")}</a>
   <a href="#contact">{$_("navbar.projects")}</a>
   <a href="#about">{$_("navbar.contact")}</a>
+  <i class="fa-solid fa-language"></i>
   <select bind:value={$locale}>
     {#each $locales as locale}
       <option value={locale}>{locale}</option>
@@ -35,6 +36,10 @@
   .navigation a:hover {
     background-color: #ddd;
     color: black;
+  }
+
+  .fa-language {
+    font-size: 50px !important;
   }
 
 </style>
