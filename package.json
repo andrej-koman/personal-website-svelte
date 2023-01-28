@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "smelte": "^1.1.8",
-    "svelte-routing": "^1.6.0"
+    "svelte-i18n": "^3.6.0",
+    "svelte-routing": "^1.6.0",
+    "svelte-waypoint": "^0.1.4",
+    "vitest": "^0.28.3"
   }
 }

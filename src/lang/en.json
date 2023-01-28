@@ -1,0 +1,13 @@
+ {
+    "introduction.welcome": "Welcome.",
+    "introduction.description1":"My name is Andrej Koman and I am a student from Maribor, Slovenia.",
+    "introduction.description2": "Currently working as a QA Engineer at ",
+    "introduction.description3": "and getting my degree",
+    "introduction.description4": "in Information Technology at ",
+    "introduction.FERI": "FERI",
+    "introduction.VIAR": "VIAR",
+    "navbar.about": "About",
+    "navbar.carrer": "Carrer",
+    "navbar.projects": "Projects",
+    "navbar.contact": "Contact"
+ }
