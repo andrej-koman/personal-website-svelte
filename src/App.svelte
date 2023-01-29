@@ -3,7 +3,10 @@
   import Introduction from "./components/Introduction.svelte";
   import Career from "./components/Career.svelte";
   import Navbar from "./components/Navbar.svelte";
+  import Particles from "svelte-particles";
+  import { loadFull } from "tsparticles";
   import { isLoading } from "svelte-i18n";
+
   let scroll;
 </script>
 
