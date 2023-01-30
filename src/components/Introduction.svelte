@@ -1,14 +1,8 @@
 <script>
     import { _ } from "svelte-i18n";  
     import Particles from "svelte-particles";
+    import { onMount } from "svelte";
     import {loadFull} from "tsparticles";
-    
-    let onParticlesLoaded = event => {
-        const particlesContainer = event.detail.particles;
-
-        // you can use particlesContainer to call all the Container class
-        // (from the core library) methods like play, pause, refresh, start, stop
-    };
 
     let particlesInit = async engine => {
         // you can use main to customize the tsParticles instance adding presets or custom shapes
@@ -16,11 +10,34 @@
         // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(engine);
     };
+    
+    /* Make the navbar disapear when the Welcome text isnt visible */
+    const onIntersection = (entries) => {
+        let nav = document.getElementsByClassName("navigation")[0];
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                nav.classList.remove("active");
+                nav.classList.add("disabled");
+            } else {
+                nav.classList.add("active");
+                nav.classList.remove("disabled");
+            }
+        });
+    };
+    var observer = new IntersectionObserver(onIntersection, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    });
 
+    /* Wait for the page to render */
+    onMount(() => {
+        observer.observe(document.getElementById("introduction-title"));
+    });
 </script>
 
 <section class="introduction-section">
-  <Particles id="tsparticles" on:particlesLoaded={onParticlesLoaded} particlesInit={particlesInit} options={{
+  <Particles id="tsparticles" particlesInit={particlesInit} options={{
     particles: {
       number: {
         value: 50,
@@ -129,7 +146,7 @@
     },
     retina_detect: true,}} />
   <div class="maintext-div">
-    <h1>{$_("introduction.welcome")}</h1>
+    <h1 id="introduction-title">{$_("introduction.welcome")}</h1>
     <small>
         {$_("introduction.description1")}<br/>
         {$_("introduction.description2")}
@@ -143,7 +160,7 @@
 
 <style>
   .introduction-section {
-    height: 98vh;
+    height: 99vh;
     width: 100%;
     display: flex;
     justify-content: center;

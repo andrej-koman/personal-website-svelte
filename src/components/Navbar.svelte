@@ -1,18 +1,21 @@
 <script>
     import { locale, locales, _ } from "svelte-i18n";
-
-    const changeLocale = (e) => {
-        localStorage.setItem("locale", e.target.value);
-    };
+    export let scrollY;
 </script>
 
+<svelte:window bind:scrollY={scrollY} />
+
 <div class="navigation">
-  <a href="#about">{$_("navbar.about")}</a>
-  <a href="#news">{$_("navbar.carrer")}</a>
-  <a href="#contact">{$_("navbar.projects")}</a>
-  <a href="#about">{$_("navbar.contact")}</a>
+  <!-- svelte-ignore a11y-invalid-attribute -->
+  <a href="#about-section">{$_("navbar.about")}</a>
+  <!-- svelte-ignore a11y-invalid-attribute -->
+  <a href="#">{$_("navbar.carrer")}</a>
+  <!-- svelte-ignore a11y-invalid-attribute -->
+  <a href="#">{$_("navbar.projects")}</a>
+  <!-- svelte-ignore a11y-invalid-attribute -->
+  <a href="#">{$_("navbar.contact")}</a>
   <i class="fa-solid fa-globe icon"></i>
-  <select bind:value={$locale} on:select={changeLocale} class="navigation-lang-select">
+  <select bind:value={$locale}  class="navigation-lang-select">
       {#each $locales as locale}
         <option value={locale}>{locale}</option>
       {/each}
@@ -20,13 +23,16 @@
 </div>
 
 <style>
+  /* Navigation styles */
   .navigation {
     background-color: #242424;
     overflow: hidden;
     position: fixed;
     border-radius: 0 0 10px 10px;
     margin-top: -10px;
-    left: 38%;
+    left: 39%;
+    transition: all .1s ease-in-out;
+    transform-origin: left top;
 }
 
   .navigation a {
@@ -39,23 +45,24 @@
   }
 
   .navigation a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .icon {
-    font-size: 20px !important;
-    padding: 12px;
-    cursor: pointer;
+    color: gray;
   }
 
   .navigation-lang-select {
     background-color: #242424;
     border: none;
-    font-size: 15px;
-    cursor: pointer;
+    color: #f2f2f2;
     margin-left: -10px;
     margin-right: 10px;
+  }
+  .navigation-lang-select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .icon {
+    font-size: 18px !important;
+    padding: 12px;
   }
 
 </style>

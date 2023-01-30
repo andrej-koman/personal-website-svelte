@@ -12,7 +12,8 @@
 .career-section {
     height: 1000px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    margin-left: 2px;
 }
 </style>

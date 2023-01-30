@@ -1,25 +1,17 @@
 <script>
   // TODO: Add scrolling effect
   import Introduction from "./components/Introduction.svelte";
-  import Career from "./components/Career.svelte";
   import Navbar from "./components/Navbar.svelte";
-  import Particles from "svelte-particles";
-  import { loadFull } from "tsparticles";
+  import Content from "./components/Content.svelte";
   import { isLoading } from "svelte-i18n";
-
-  let scroll;
 </script>
 
-<svelte:window bind:scrollY={scroll} />
-
 {#if $isLoading}
-  <div class="loading">
-    <div class="loading__spinner"></div>
-  </div>
+  <h1>Loading...</h1>
 {:else}
+<Navbar />
 <main>
-  <Navbar />
   <Introduction />
-  <Career />
+  <Content />
 </main>
 {/if}
