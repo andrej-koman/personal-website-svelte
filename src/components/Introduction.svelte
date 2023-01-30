@@ -12,7 +12,7 @@
     };
     
     /* Make the navbar disapear when the Welcome text isnt visible */
-    const onIntersection = (entries) => {
+    var observer = new IntersectionObserver((entries) => {
         let nav = document.getElementsByClassName("navigation")[0];
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -23,8 +23,7 @@
                 nav.classList.remove("disabled");
             }
         });
-    };
-    var observer = new IntersectionObserver(onIntersection, {
+    }, {
         root: null,
         rootMargin: "0px",
         threshold: 0.5
@@ -32,7 +31,7 @@
 
     /* Wait for the page to render */
     onMount(() => {
-        observer.observe(document.getElementById("introduction-title"));
+        observer.observe(document.getElementsByClassName("introduction-section")[0]);
     });
 </script>
 
@@ -146,7 +145,7 @@
     },
     retina_detect: true,}} />
   <div class="maintext-div">
-    <h1 id="introduction-title">{$_("introduction.welcome")}</h1>
+    <h1>{$_("introduction.welcome")}</h1>
     <small>
         {$_("introduction.description1")}<br/>
         {$_("introduction.description2")}

@@ -30,7 +30,6 @@
     position: fixed;
     border-radius: 0 0 10px 10px;
     margin-top: -10px;
-    left: 39%;
     transition: all .1s ease-in-out;
     transform-origin: left top;
 }
