@@ -1,6 +1,10 @@
 <script>
     import Career from "./Career.svelte";
     import About from "./About.svelte";
+    import Contact from "./Contact.svelte";
 </script>
 
-<About />
+<section class="content-section">
+    <About />
+    <Contact />
+</section>

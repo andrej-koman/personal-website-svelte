@@ -1,19 +1,16 @@
 <script>
     import { locale, locales, _ } from "svelte-i18n";
-    export let scrollY;
 </script>
-
-<svelte:window bind:scrollY={scrollY} />
 
 <div class="navigation">
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#about-title">{$_("navbar.about")}</a>
+  <a href="#about-section">{$_("navbar.about")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#">{$_("navbar.carrer")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#">{$_("navbar.projects")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#">{$_("navbar.contact")}</a>
+  <a href="#contact-title">{$_("navbar.contact")}</a>
   <i class="fa-solid fa-globe icon"></i>
   <select bind:value={$locale}  class="navigation-lang-select">
       {#each $locales as locale}
@@ -51,7 +48,7 @@
     background-color: #242424;
     border: none;
     color: #f2f2f2;
-    margin-left: -10px;
+    margin-left: -15px;
     margin-right: 10px;
   }
   .navigation-lang-select:focus {

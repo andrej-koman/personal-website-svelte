@@ -12,6 +12,19 @@
   "navbar.contact": "Contact",
   "about": {
     "title": "ABOUT ME",
-    "text": "Hello again, I'm Andrej. I attended the Secondary School of Electro-Computing in Maribor, where I first encountered programming, namely C++. Throughout high school I hadn't developed much interest in programming, it came when I started attending University of Maribor, The Faculty of Electrical Engineering and Computer Science and started creating projects in my spare time. I am also a very big fan of various sports, especially football, which I trained for 13 years and currently play in the university team."
+    "text": "Hello again, I'm Andrej. I attended the Secondary School of Electro-Computing in Maribor, where I first encountered programming, namely C++. Throughout high school I hadn't developed much interest in programming, it came when I started attending University of Maribor, The Faculty of Electrical Engineering and Computer Science and started creating projects in my spare time. I am also a very big fan of various sports, especially football, which I trained for 13 years and currently play in the university team.",
+    "imageTooltip": "Me and Goran at Niagara Falls"
+  },
+  "contact": {
+    "title": "CONTACT ME",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "error": {
+      "required": "Please fill out all required fields.",
+      "email": "Please enter a valid email address."
+    },
+    "send": "SEND",
+    "snackbar": "Message sent!"
   }
 }

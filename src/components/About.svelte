@@ -1,17 +1,54 @@
 <script>
     import { _ } from "svelte-i18n";
-    import { Image } from "smelte";
+    import {onMount} from "svelte";
+
+
+    /* Make observers for the image and the title, which make them appear */
+    var imageObserver = new IntersectionObserver((entries) => {
+        let image = document.getElementsByClassName("about-image")[0];
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                image.classList.add("enabled");
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    });
+
+    var titleObserver = new IntersectionObserver((entries) => {
+        let span = document.getElementsByClassName("about-text")[0];
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                span.classList.add("enabled");
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    });
+
+
+    /* Wait for the load */
+    onMount(() => {
+        titleObserver.observe(document.getElementsByClassName("about-text")[0]);
+        imageObserver.observe(document.getElementsByClassName("about-bio")[0]);
+    });
 </script>
-<section class="about-section">
-    <h1 id="about-title">{$_("about.title")}</h1>
-    <img class="about-image" src="./me.jpeg" alt="Andrej Koman" />
-    <span class="about-text">{$_("about.text")}</span>
+<section class="about-section" id="about-section">
+    <div class="about-bio">
+        <img class="about-image reveal disabled" src="./me.jpeg" alt="Andrej Koman" />
+        <span class="about-text reveal disabled"> 
+            <h1 id="about-title">{$_("about.title")}</h1>
+            {$_("about.text")}
+        </span>
+    </div>
 </section>
 
 <style>
-:root {
-    --primary-background-color: #696969;
-}
+
 .about-section {
     width: 100%;
     display: grid;
@@ -19,20 +56,30 @@
 }
 #about-title {
     font-size: 30px;
-    grid-column: 5 / 7;
-    justify-self: center;
     margin-bottom: 50px;
+    margin-top: 0px;
 }
 .about-image {
-    grid-column: 3 / 5;
     border-radius: 4px;
-    width: 550px;
+    max-width: 550px;
+    margin-right: 20px;
+    transition: all .25s ease-out;
+    transform-origin: left bottom;
 }
 
 .about-text {
-    grid-column: 6 / 9;
     font-size: 15px;
     text-align: justify;
     align-self: center;
+    transition: all .2s ease-in;
+    transform-origin: right bottom;
+}
+
+.about-bio {
+    grid-column: 3 / 9;
+    widows: auto;
+    height: auto;
+    display: flex;
+    margin-top: 15px;
 }
 </style>

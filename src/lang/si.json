@@ -3,7 +3,7 @@
   "introduction.description1": "Moje ime je Andrej in sem študent iz Maribora, Slovenije.",
   "introduction.description2": "Trenutno delam kot QA Engineer pri ",
   "introduction.description3": "in pridobivam diplomo",
-  "introduction.description4": "v smeri Informatike na",
+  "introduction.description4": "v smeri Informatike na ",
   "introduction.FERI": "FERI",
   "introduction.VIAR": "VIAR",
   "navbar.about": "O meni",
@@ -12,6 +12,19 @@
   "navbar.contact": "Kontakt",
   "about": {
     "title": "O MENI",
-    "text": "Še enkrat pozdravljeni, sem Andrej. Obiskoval sem Srednjo elektro-računalniško šolo Maribor, kjer sem se prvič srečal z programiranje in sicer z C++. Skozi srednjo šolo sem začel razvijati vedno večji interes v programiranje, ta pa je prešel v obsedenost ko sem začel obiskovati Univerzo v Mariboru, Fakulteta za elektrotehniko, računalništvo in informatiko FERI in začel v prostem času kreirate osebne projekte. Sem tudi zelo velik navdušenec nad raznimi športi, posebaj z nogometom, katerega sem treniral 13 let in trenutno igram v univerzitetni ekipi."
+    "text": "Še enkrat pozdravljeni, sem Andrej. Obiskoval sem Srednjo elektro-računalniško šolo Maribor, kjer sem se prvič srečal z programiranje in sicer z C++. Skozi srednjo šolo sem začel razvijati vedno večji interes v programiranje, ta pa je prešel v obsedenost ko sem začel obiskovati Univerzo v Mariboru, Fakulteta za elektrotehniko, računalništvo in informatiko FERI in začel v prostem času kreirate osebne projekte. Sem tudi zelo velik navdušenec nad raznimi športi, posebaj z nogometom, katerega sem treniral 13 let in trenutno igram v univerzitetni ekipi.",
+    "imageTooltip": "Jaz in Goran pri Niagaraskih slapovih"
+  },
+  "contact": {
+    "title": "KONTAKTIRAJ ME",
+    "name": "Ime",
+    "email": "Email",
+    "message": "Sporočilo",
+    "error": {
+      "required": "Prosimo izpolnit vsa zahtevana polja.",
+      "email": "Vnesite veljaven e-poštni naslov."
+    },
+    "send": "POŠLJI",
+    "snackbar": "Sporočilo poslano!"
   }
 }

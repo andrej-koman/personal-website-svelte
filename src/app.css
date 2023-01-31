@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: monospace,'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -7,7 +7,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  scroll-behavior: smooth;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,9 +51,40 @@ main {
   width: 100%;
 }
 
-.active {
+.disabled {
   transform: scaleY(0);
 }
-.disabled {
+.enabled {
   transform: scaleY(1);
+}
+
+.error-input {
+  border-color: rgb(186, 48, 48) !important;
+}
+
+.show {
+  visibility: visible !important; 
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }

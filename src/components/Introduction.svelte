@@ -17,11 +17,11 @@
         let nav = document.getElementsByClassName("navigation")[0];
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                nav.classList.remove("active");
-                nav.classList.add("disabled");
-            } else {
-                nav.classList.add("active");
                 nav.classList.remove("disabled");
+                nav.classList.add("enabled");
+            } else {
+                nav.classList.add("disabled");
+                nav.classList.remove("enabled");
             }
         });
     }, {

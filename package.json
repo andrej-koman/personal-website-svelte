@@ -10,12 +10,12 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.0",
-    "svelte": "^3.54.0",
+    "svelte": "^3.55.1",
     "vite": "^4.0.0"
   },
   "dependencies": {
-    "smelte": "^1.1.8",
     "svelte-i18n": "^3.6.0",
+    "svelte-materialify": "^0.3.11",
     "svelte-particles": "^2.8.0",
     "svelte-preprocess": "^5.0.1",
     "svelte-routing": "^1.6.0",
