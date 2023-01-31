@@ -4,4 +4,3 @@
 </script>
 
 <About />
-<Career />

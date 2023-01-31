@@ -4,6 +4,7 @@
     import { onMount } from "svelte";
     import {loadFull} from "tsparticles";
 
+    /* Initialize the background particles */
     let particlesInit = async engine => {
         // you can use main to customize the tsParticles instance adding presets or custom shapes
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -159,7 +160,7 @@
 
 <style>
   .introduction-section {
-    height: 99vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
