@@ -1,5 +1,9 @@
 <script>
     import { locale, locales, _ } from "svelte-i18n";
+
+    const setLangLocal = (e) =>{
+        localStorage.setItem("locale", e.target.value);
+    }
 </script>
 
 <div class="navigation">
@@ -15,7 +19,7 @@
 </div>
 <div class="navbar-lang">
   <i class="fa-solid fa-globe icon"></i>
-  <select bind:value={$locale}  class="navigation-lang-select">
+  <select bind:value={$locale}  class="navigation-lang-select" on:change={setLangLocal}>
       {#each $locales as locale}
         <option value={locale}>{locale}</option>
       {/each}
