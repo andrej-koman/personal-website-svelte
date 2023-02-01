@@ -3,7 +3,7 @@
 </script>
 
 <div class="navigation">
-  <img src="../../public/logo2.svg" alt="logo" />
+  <img src="/logo.svg" alt="logo" />
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#about-section">{$_("navbar.about")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
