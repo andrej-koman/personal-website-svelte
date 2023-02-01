@@ -28,8 +28,10 @@
     overflow: hidden;
     position: fixed;
     border-radius: 0 0 10px 10px;
+    display:none;
+    opacity: 0;
     margin-top: -10px;
-    transition: all .1s ease-in-out;
+    transition: all 2s ease-in-out;
     transform-origin: left top;
 }
 
@@ -74,6 +76,9 @@
   .navbar-lang {
     right: 0;
     position: fixed;
+    display:none;
+    opacity: 0;
+    transition: all 2s ease-in-out;
   }
 
 </style>

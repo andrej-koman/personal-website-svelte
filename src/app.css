@@ -21,7 +21,10 @@ main {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
 }
-
+body {
+  overflow-y: scroll;
+}
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 20px;
   height: 20px;
@@ -42,6 +45,7 @@ main {
   background-color: rgba(237, 231, 225, 0.2);
 }
 
+/* Background particles */
 #tsparticles {
   position: fixed;
   top: 0;
@@ -50,6 +54,7 @@ main {
   height: 98vh;
   width: 100%;
 }
+/* Used for animations - transitions */
 
 .disabled {
   transform: scaleY(0);
@@ -66,8 +71,6 @@ main {
   visibility: visible !important; 
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-
-
 
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;}

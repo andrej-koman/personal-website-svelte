@@ -8,7 +8,7 @@
         let image = document.getElementsByClassName("about-image")[0];
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                image.classList.add("enabled");
+                image.style.opacity = "1";
             }
         });
     }, {
@@ -21,7 +21,7 @@
         let span = document.getElementsByClassName("about-text")[0];
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                span.classList.add("enabled");
+                span.style.opacity = "1"
             }
         });
     }, {
@@ -39,8 +39,8 @@
 </script>
 <section class="about-section" id="about-section">
     <div class="about-bio">
-        <img class="about-image reveal disabled" src="./me.jpeg" alt="Andrej Koman" />
-        <span class="about-text reveal disabled"> 
+        <img class="about-image" src="./me.jpeg" alt="Andrej Koman" />
+        <span class="about-text"> 
             <h1 id="about-title">{$_("about.title")}</h1>
             {$_("about.text")}
         </span>
@@ -63,7 +63,8 @@
     border-radius: 4px;
     max-width: 550px;
     margin-right: 20px;
-    transition: all .25s ease-out;
+    opacity: 0;
+    transition: all 1.5s ease-in;
     transform-origin: left bottom;
 }
 
@@ -71,7 +72,8 @@
     font-size: 15px;
     text-align: justify;
     align-self: center;
-    transition: all .2s ease-in;
+    opacity: 0;
+    transition: all 1.5s ease-in;
     transform-origin: right bottom;
 }
 
