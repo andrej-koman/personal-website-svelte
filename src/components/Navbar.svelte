@@ -3,6 +3,7 @@
 </script>
 
 <div class="navigation">
+  <img src="../../public/logo2.svg" alt="logo" />
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#about-section">{$_("navbar.about")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
@@ -11,6 +12,8 @@
   <a href="#">{$_("navbar.projects")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#contact-title">{$_("navbar.contact")}</a>
+</div>
+<div class="navbar-lang">
   <i class="fa-solid fa-globe icon"></i>
   <select bind:value={$locale}  class="navigation-lang-select">
       {#each $locales as locale}
@@ -22,7 +25,6 @@
 <style>
   /* Navigation styles */
   .navigation {
-    background-color: #242424;
     overflow: hidden;
     position: fixed;
     border-radius: 0 0 10px 10px;
@@ -31,13 +33,20 @@
     transform-origin: left top;
 }
 
-  .navigation a {
+  .navigation a, .navigation img {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 10px;
     text-decoration: none;
     font-size: 13px;
+  }
+  .navigation a {
+    margin-top: 5px;
+  }
+
+  .navigation img {
+    width: 30px;
   }
 
   .navigation a:hover {
@@ -50,6 +59,7 @@
     color: #f2f2f2;
     margin-left: -15px;
     margin-right: 10px;
+    margin-top: 5px;
   }
   .navigation-lang-select:focus {
     outline: none;
@@ -59,6 +69,11 @@
   .icon {
     font-size: 18px !important;
     padding: 12px;
+  }
+
+  .navbar-lang {
+    right: 0;
+    position: fixed;
   }
 
 </style>
