@@ -4,7 +4,6 @@
   import Content from "./components/Content.svelte";
   import Particles from "svelte-particles";
   import { loadFull } from "tsparticles";
-  import { isLoading } from "svelte-i18n";
   import { onMount } from "svelte";
   let showContent = false;
   const sleep = (ms) => {
@@ -64,9 +63,6 @@
   };
 </script>
 
-{#if $isLoading}
-  <h1>Loading messages...</h1>
-{:else}
   <div class="loader-container">
     <div class="loader" />
   </div>
@@ -190,7 +186,6 @@
       <Content />
     {/if}
   </main>
-{/if}
 
 <style>
   main {
