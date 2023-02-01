@@ -11,7 +11,7 @@
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#about-section">{$_("navbar.about")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#">{$_("navbar.carrer")}</a>
+  <a href="#">{$_("navbar.experience")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
   <a href="#">{$_("navbar.projects")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
@@ -53,6 +53,7 @@
 
   .navigation img {
     width: 30px;
+    cursor: pointer;
   }
 
   .navigation a:hover {

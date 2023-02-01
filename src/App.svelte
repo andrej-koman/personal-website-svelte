@@ -2,7 +2,9 @@
   import Introduction from "./components/Introduction.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Content from "./components/Content.svelte";
+  import Footer from "./components/Footer.svelte";
   import Particles from "svelte-particles";
+
   import { loadFull } from "tsparticles";
   import { onMount } from "svelte";
   import { isLoading } from "svelte-i18n";

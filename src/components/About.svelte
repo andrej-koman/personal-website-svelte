@@ -30,7 +30,6 @@
         threshold: 0.5
     });
 
-
     /* Wait for the load */
     onMount(() => {
         titleObserver.observe(document.getElementsByClassName("about-text")[0]);

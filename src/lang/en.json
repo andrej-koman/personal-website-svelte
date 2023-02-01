@@ -7,7 +7,7 @@
   "introduction.FERI": "FERI",
   "introduction.VIAR": "VIAR",
   "navbar.about": "About",
-  "navbar.carrer": "Carrer",
+  "navbar.experience": "Experience",
   "navbar.projects": "Projects",
   "navbar.contact": "Contact",
   "about": {
@@ -26,5 +26,8 @@
     },
     "send": "SEND",
     "snackbar": "Message sent!"
+  },
+  "navbar": {
+    "experience": ""
   }
 }

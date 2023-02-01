@@ -1,5 +1,5 @@
 <script>
-    import Career from "./Career.svelte";
+    import Experience from "./Experience.svelte";
     import About from "./About.svelte";
     import Contact from "./Contact.svelte";
 </script>

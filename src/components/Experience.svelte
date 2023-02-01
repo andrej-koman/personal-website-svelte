@@ -2,14 +2,14 @@
 
 </script>
 
-<section class="career-section">
+<section class="experience-section">
     <div class="maintext-div">
-        <h1>Career</h1>
+        <h1>Experience</h1>
     </div>
 </section>
 
 <style>
-.career-section {
+.experience-section {
     height: 1000px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.1);

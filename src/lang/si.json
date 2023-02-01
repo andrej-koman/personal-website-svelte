@@ -7,12 +7,12 @@
   "introduction.FERI": "FERI",
   "introduction.VIAR": "VIAR",
   "navbar.about": "O meni",
-  "navbar.carrer": "Kariera",
+  "navbar.experience": "Izkušnje",
   "navbar.projects": "Projekti",
   "navbar.contact": "Kontakt",
   "about": {
     "title": "O MENI",
-    "text": "Še enkrat pozdravljeni, sem Andrej. Obiskoval sem Srednjo elektro-računalniško šolo Maribor, kjer sem se prvič srečal z programiranje in sicer z C++. Skozi srednjo šolo sem začel razvijati vedno večji interes v programiranje, ta pa je prešel v obsedenost ko sem začel obiskovati Univerzo v Mariboru, Fakulteta za elektrotehniko, računalništvo in informatiko FERI in začel v prostem času kreirate osebne projekte. Sem tudi zelo velik navdušenec nad raznimi športi, posebaj z nogometom, katerega sem treniral 13 let in trenutno igram v univerzitetni ekipi.",
+    "text": "Še enkrat pozdravljeni, sem Andrej in sem star 20 let. Obiskoval sem Srednjo elektro-računalniško šolo Maribor, kjer sem se prvič srečal z programiranje in sicer z C++. Skozi srednjo šolo sem začel razvijati vedno večji interes v programiranje, ta pa je prešel v obsedenost ko sem začel obiskovati Univerzo v Mariboru, Fakulteta za elektrotehniko, računalništvo in informatiko FERI in začel v prostem času kreirate osebne projekte. Sem tudi zelo velik navdušenec nad raznimi športi, posebaj z nogometom, katerega sem treniral 13 let in trenutno igram v univerzitetni ekipi.",
     "imageTooltip": "Jaz in Goran pri Niagaraskih slapovih"
   },
   "contact": {
@@ -26,5 +26,8 @@
     },
     "send": "POŠLJI",
     "snackbar": "Sporočilo poslano!"
+  },
+  "navbar": {
+    "experience": "Izkušnje"
   }
 }

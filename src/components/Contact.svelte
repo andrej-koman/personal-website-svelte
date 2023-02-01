@@ -2,7 +2,12 @@
   import { _ } from "svelte-i18n";
   // error-input class is used to show error message
   let errorMessage;
-  let snackbar = false;
+  const showSnackbar = (snackbar) => {
+    snackbar.classList.add("show");
+        setTimeout(function () {
+          snackbar.classList.remove("show");
+        }, 3000);
+  }
   const onSendClick = () => {
     errorMessage = "";
     const name = document.querySelector(".name");
@@ -34,16 +39,29 @@
       email: email.value,
       message: message.value,
     };
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "andrej.koman123@gmail.com",
+      Password: process.env.STMP_PASS,
+      To: "andrej.koman123@gmail.com",
+      From: "andrej.koman123@gmail.com",
+      Subject: data.email,
+      Body: data.name + "\n" + data.message,
+    })
+      .then((message) => {
+        // Show snackbar
+        var snackbar = document.getElementsByClassName("snackbar")[0];
+        showSnackbar(snackbar);
+      })
+      .catch((err) => {
+        var snackbar = document.getElementsByClassName("snackbar")[0];
+        snackbar.innerHTML = err;
+        showSnackbar(snackbar);
+      });
     // Reset the form
     name.value = "";
     email.value = "";
     message.value = "";
-    // Show snackbar
-    var snackbar = document.getElementsByClassName("snackbar")[0];
-    snackbar.classList.add("show");
-    setTimeout(function () {
-      snackbar.classList.remove("show");
-    }, 3000);
   };
 
   const resetInput = (e) => {
@@ -57,7 +75,7 @@
   <input
     type="text*"
     class="contact-input name"
-    placeholder="{$_("contact.name")}*"
+    placeholder="{$_('contact.name')}*"
     required
     on:input={resetInput}
     on:focusout={resetInput}
@@ -68,14 +86,14 @@
     on:focusout={resetInput}
     type="email*"
     class="contact-input email"
-    placeholder="{$_("contact.email")}*"
+    placeholder="{$_('contact.email')}*"
     required
   />
   <textarea
     on:input={resetInput}
     on:focusout={resetInput}
     class="contact-input textarea"
-    placeholder="{$_("contact.message")}*"
+    placeholder="{$_('contact.message')}*"
     rows="100"
     cols="75"
     required

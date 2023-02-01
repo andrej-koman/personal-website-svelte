@@ -14,6 +14,7 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "mongoose": "^6.9.0",
     "svelte-i18n": "^3.6.0",
     "svelte-materialify": "^0.3.11",
     "svelte-particles": "^2.8.0",
