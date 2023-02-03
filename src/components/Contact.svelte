@@ -1,6 +1,5 @@
 <script>
   import { _ } from "svelte-i18n";
-  // error-input class is used to show error message
   let errorMessage;
   const showSnackbar = (snackbar) => {
     snackbar.classList.add("show");
@@ -8,6 +7,7 @@
           snackbar.classList.remove("show");
         }, 3000);
   }
+  
   const onSendClick = () => {
     errorMessage = "";
     const name = document.querySelector(".name");
@@ -42,7 +42,7 @@
     Email.send({
       Host: "smtp.elasticemail.com",
       Username: "andrej.koman123@gmail.com",
-      Password: process.env.STMP_PASS,
+      Password: import.meta.env.VITE_SMTP_PASS,
       To: "andrej.koman123@gmail.com",
       From: "andrej.koman123@gmail.com",
       Subject: data.email,

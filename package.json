@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,7 +20,9 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mongoose": "^6.9.0",
+    "node": "^19.6.0",
     "svelte-i18n": "^3.6.0",
     "svelte-materialify": "^0.3.11",
     "svelte-particles": "^2.8.0",
