@@ -1,5 +1,6 @@
 <script>
   import { _ } from "svelte-i18n";
+  import { fade } from "svelte/transition";
   let errorMessage;
   const showSnackbar = (snackbar) => {
     snackbar.classList.add("show");
@@ -38,7 +39,8 @@
       name: name.value,
       email: email.value,
       message: message.value,
-    };
+      body: "This messages was sent from www.andrejkoman.com \nName: " + name.value + "\nEmail: " + email.value + "\nMessage: " + message.value + "\n",
+};
     Email.send({
       Host: "smtp.elasticemail.com",
       Username: "andrej.koman123@gmail.com",
@@ -46,7 +48,7 @@
       To: "andrej.koman123@gmail.com",
       From: "andrej.koman123@gmail.com",
       Subject: data.email,
-      Body: data.name + "\n" + data.message,
+      Body: data.body,
     })
       .then((message) => {
         // Show snackbar
@@ -164,6 +166,7 @@
     margin-top: -15px;
     margin-left: -10px;
     margin-bottom: 20px;
+    width: 400px;
   }
 
   .snackbar {

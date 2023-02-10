@@ -189,6 +189,7 @@
     <Introduction />
     {#if showContent}
       <Content />
+      <Footer />
     {/if}
   </main>
   {/if}

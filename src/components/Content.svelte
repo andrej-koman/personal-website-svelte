@@ -6,5 +6,6 @@
 
 <section class="content-section">
     <About />
+    <Experience />
     <Contact />
 </section>

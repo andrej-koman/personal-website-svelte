@@ -61,6 +61,8 @@
 .about-image {
     border-radius: 4px;
     max-width: 550px;
+    width: 100%;
+    min-width: 100px;
     margin-right: 20px;
     opacity: 0;
     transition: all 1.5s ease-in;
@@ -72,6 +74,9 @@
     text-align: justify;
     align-self: center;
     opacity: 0;
+    max-width: 550px;
+    width: 100%;
+    min-width: 300px;
     transition: all 1.5s ease-in;
     transform-origin: right bottom;
 }

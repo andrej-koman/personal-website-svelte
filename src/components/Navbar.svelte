@@ -9,13 +9,13 @@
 <div class="navigation">
   <img src="/logo.svg" alt="logo" />
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#about-section">{$_("navbar.about")}</a>
+  <a href="#about-section" class="nav-item">{$_("navbar.about")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#">{$_("navbar.experience")}</a>
+  <a href="#" class="nav-item">{$_("navbar.experience")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#">{$_("navbar.projects")}</a>
+  <a href="#" class="nav-item">{$_("navbar.projects")}</a>
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a href="#contact-title">{$_("navbar.contact")}</a>
+  <a href="#contact-title" class="nav-item">{$_("navbar.contact")}</a>
 </div>
 <div class="navbar-lang">
   <i class="fa-solid fa-globe icon"></i>
@@ -49,6 +49,7 @@
   }
   .navigation a {
     margin-top: 5px;
+    transition: margin-top 0.2s ease;
   }
 
   .navigation img {
@@ -58,6 +59,7 @@
 
   .navigation a:hover {
     color: gray;
+    margin-top: 1px;
   }
 
   .navigation-lang-select {
@@ -67,6 +69,7 @@
     margin-left: -15px;
     margin-right: 10px;
     margin-top: 5px;
+    border-radius: 2px;
   }
   .navigation-lang-select:focus {
     outline: none;

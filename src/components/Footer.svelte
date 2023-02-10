@@ -1,16 +1,24 @@
 <script>
-
+    import { fade } from 'svelte/transition';
 </script>
 
-<div class="footer">
-    <p>Footer</p>
+<div class="footer"> 
+    <i class="fa-regular fa-copyright"></i>
+    <space />
+    <span>2023, Andrej Koman</span>
 </div>
 
 <style>
     .footer {
-        height: 100px;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 2px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 12px;
+    }
+    .fa-copyright {
+        margin-right: 5px;
     }
 </style>
